@@ -1,0 +1,11 @@
+# Install the application itself so the `nvoc-tui` entry point is available in a plain venv.
+-e .
+
+# Runtime dependencies mirrored from `pyproject.toml`.
+plotext>=5.3.2
+textual>=6.1.0
+textual-plotext>=1.0.1
+
+# Packaging / single-file build support.
+PyInstaller>=6.0
+

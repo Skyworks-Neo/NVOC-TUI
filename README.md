@@ -43,6 +43,27 @@ uv sync
 uv run nvoc-tui
 ```
 
+### Plain venv
+
+If you prefer `venv` + `pip`, install the app and build tools from `requirements.txt`:
+
+```bash
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+nvoc-tui
+```
+
+### PyInstaller single-binary build
+
+Build a one-file executable with the bundled spec:
+
+```bash
+pyinstaller nvoc-tui.spec
+```
+
+The output will be placed in `dist/nvoc-tui.exe`.
+
 ### Tests
 
 ```bash
@@ -73,6 +94,27 @@ uv run pytest
 uv sync
 uv run nvoc-tui
 ```
+
+### 纯 venv 安装
+
+如果你想只用 `venv` + `pip`，可以直接安装 `requirements.txt`：
+
+```bash
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+nvoc-tui
+```
+
+### PyInstaller 单 binary 编译
+
+使用仓库内提供的 spec 文件打包成单文件可执行程序：
+
+```bash
+pyinstaller nvoc-tui.spec
+```
+
+生成结果会输出到 `dist/nvoc-tui.exe`。
 
 ### 测试
 
